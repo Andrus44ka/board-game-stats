@@ -1,0 +1,11 @@
+### Получить список всех игр
+GET http://localhost:8080/api/games
+
+### Создать новую игру
+POST http://localhost:8080/api/games
+Content-Type: application/json
+
+{
+  "name": "Chess",
+  "description": "A classic board game"
+}
