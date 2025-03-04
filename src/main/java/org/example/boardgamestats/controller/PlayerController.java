@@ -1,0 +1,21 @@
+package org.example.boardgamestats.controller;
+
+import org.example.boardgamestats.entity.PlayerEntity;
+import org.example.boardgamestats.repository.PlayerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/players")
+public class PlayerController {
+    @Autowired
+    private PlayerRepository playerRepository;
+
+    @GetMapping
+    public List<PlayerEntity> getPlayers() { return playerRepository.findAll(); }
+
+    @PostMapping
+    public PlayerEntity createPlayer(@RequestBody PlayerEntity player) {return playerRepository.save(player); }
+}

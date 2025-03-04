@@ -9,3 +9,15 @@ Content-Type: application/json
   "name": "Chess",
   "description": "A classic board game"
 }
+
+### Получить список всех игроков
+GET http://localhost:8080/api/players
+
+### Создать нового игрока
+POST http://localhost:8080/api/players
+Content-Type: application/json
+
+{
+  "name": "Alice",
+  "password": "password123"
+}
