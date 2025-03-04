@@ -1,23 +1,43 @@
 ### Получить список всех игр
 GET http://localhost:8080/api/games
 
-### Создать новую игру
-POST http://localhost:8080/api/games
+### Создать несколько игроков
+POST http://localhost:8080/api/games/batch
 Content-Type: application/json
 
-{
-  "name": "Chess",
-  "description": "A classic board game"
-}
+[
+  {
+    "name": "Игра престолов",
+    "description": "Lorem Ipsum"
+  },
+  {
+    "name": "Немезида",
+    "description": "Lorem Ipsum"
+  },
+  {
+    "name": "Корни",
+    "description": "Lorem Ipsum"
+  }
+]
 
 ### Получить список всех игроков
 GET http://localhost:8080/api/players
 
-### Создать нового игрока
-POST http://localhost:8080/api/players
+### Создать несколько игроков
+POST http://localhost:8080/api/players/batch
 Content-Type: application/json
 
-{
-  "name": "Alice",
-  "password": "password123"
-}
+[
+  {
+    "name": "Alice",
+    "password": "password"
+  },
+  {
+    "name": "Bob",
+    "password": "password"
+  },
+  {
+    "name": "Charlie",
+    "password": "password"
+  }
+]
