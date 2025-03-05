@@ -15,3 +15,6 @@ Content-Type: application/json
   "name": "Andrew",
   "password": "password"
 }
+
+###
+GET http://localhost:8080/api/users?userId=1
