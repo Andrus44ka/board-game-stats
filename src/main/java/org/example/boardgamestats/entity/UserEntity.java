@@ -11,6 +11,9 @@ public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    public UserEntity() {}
+
     private String name;
     private String password;
 

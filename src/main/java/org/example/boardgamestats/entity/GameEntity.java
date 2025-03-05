@@ -13,6 +13,8 @@ public class GameEntity {
     private String name;
     private String description;
 
+    public GameEntity() { }
+
     // Геттеры и сеттеры
     public Long getId() {
         return id;
