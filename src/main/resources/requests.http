@@ -1,43 +1,17 @@
-### Получить список всех игр
-GET http://localhost:8080/api/games
-
-### Создать несколько игроков
-POST http://localhost:8080/api/games/batch
+### Добавить одного пользователя
+POST http://localhost:8080/api/users/registration
 Content-Type: application/json
 
-[
-  {
-    "name": "Игра престолов",
-    "description": "Lorem Ipsum"
-  },
-  {
-    "name": "Немезида",
-    "description": "Lorem Ipsum"
-  },
-  {
-    "name": "Корни",
-    "description": "Lorem Ipsum"
-  }
-]
+{
+  "name": "Andrew",
+  "password": "password"
+}
 
-### Получить список всех игроков
-GET http://localhost:8080/api/players
-
-### Создать несколько игроков
-POST http://localhost:8080/api/players/batch
+### Добавить уже существующего пользователя
+POST http://localhost:8080/api/users/registration
 Content-Type: application/json
 
-[
-  {
-    "name": "Alice",
-    "password": "password"
-  },
-  {
-    "name": "Bob",
-    "password": "password"
-  },
-  {
-    "name": "Charlie",
-    "password": "password"
-  }
-]
+{
+  "name": "Andrew",
+  "password": "password"
+}
