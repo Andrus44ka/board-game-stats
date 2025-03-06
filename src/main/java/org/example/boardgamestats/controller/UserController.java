@@ -33,7 +33,7 @@ public class UserController {
         try {
             return ResponseEntity.ok().body("Пользователь c id: " + userId + " найден: " + userService.getById(userId).getName());
         } catch (UserNotFoundException e) {
-            throw new RuntimeException(e.getMessage());
+            return ResponseEntity.badRequest().body(e.getMessage());
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("Произошла ошибка");
         }
