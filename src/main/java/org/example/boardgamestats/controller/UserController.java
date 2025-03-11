@@ -13,29 +13,29 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
-    @Autowired
-    private UserService userService;
-
-    @PostMapping("/registration")
-    public ResponseEntity registration(@RequestBody UserEntity user) {
-        try {
-            userService.registration(user);
-            return ResponseEntity.ok().body("Пользователь \"" + user.getName() + "\" успешно сохранен");
-        } catch (UserAlreadyExistException e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Произошла ошибка");
-        }
-    }
-
-    @GetMapping()
-    public ResponseEntity getById(@RequestParam Long userId) throws UserNotFoundException {
-        try {
-            return ResponseEntity.ok().body("Пользователь c id: " + userId + " найден: " + userService.getById(userId).getName());
-        } catch (UserNotFoundException e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Произошла ошибка");
-        }
-    }
+//    @Autowired
+//    private UserService userService;
+//
+//    @PostMapping("/registration")
+//    public ResponseEntity registration(@RequestBody UserEntity user) {
+//        try {
+//            userService.registration(user);
+//            return ResponseEntity.ok().body("Пользователь \"" + user.getName() + "\" успешно сохранен");
+//        } catch (UserAlreadyExistException e) {
+//            return ResponseEntity.badRequest().body(e.getMessage());
+//        } catch (Exception e) {
+//            return ResponseEntity.badRequest().body("Произошла ошибка");
+//        }
+//    }
+//
+//    @GetMapping()
+//    public ResponseEntity getById(@RequestParam Long userId) throws UserNotFoundException {
+//        try {
+//            return ResponseEntity.ok().body("Пользователь c id: " + userId + " найден: " + userService.getById(userId).getName());
+//        } catch (UserNotFoundException e) {
+//            return ResponseEntity.badRequest().body(e.getMessage());
+//        } catch (Exception e) {
+//            return ResponseEntity.badRequest().body("Произошла ошибка");
+//        }
+//    }
 }

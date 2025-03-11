@@ -3,7 +3,8 @@ POST http://localhost:8080/api/users/registration
 Content-Type: application/json
 
 {
-  "name": "Andrew",
+  "name": "Саша",
+  "email": "andrus44ka@gmail.com",
   "password": "password"
 }
 
@@ -13,6 +14,7 @@ Content-Type: application/json
 
 {
   "name": "Andrew",
+  "email": "andrew@mail.com",
   "password": "password"
 }
 

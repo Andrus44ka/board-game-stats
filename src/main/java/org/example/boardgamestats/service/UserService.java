@@ -11,17 +11,17 @@ import java.util.List;
 
 @Service
 public class UserService {
-    @Autowired
-    private UserRepository userRepository;
-
-    public UserEntity registration (UserEntity user) throws UserAlreadyExistException {
-        if (userRepository.findUserEntityByName(user.getName()) != null) {
-            throw new UserAlreadyExistException("Пользователь \"" + user.getName() + "\" уже существует");
-        }
-        return userRepository.save(user);
-    }
-
-    public UserEntity getById (Long id) throws UserNotFoundException {
-        return userRepository.findById(id).orElseThrow(() -> new UserNotFoundException("Пользователь с id: " + id + " не найден"));
-    }
+//    @Autowired
+//    private UserRepository userRepository;
+//
+//    public UserEntity registration (UserEntity user) throws UserAlreadyExistException {
+//        if (userRepository.findUserEntityByName(user.getName()) != null) {
+//            throw new UserAlreadyExistException("Пользователь \"" + user.getName() + "\" уже существует");
+//        }
+//        return userRepository.save(user);
+//    }
+//
+//    public UserEntity getById (Long id) throws UserNotFoundException {
+//        return userRepository.findById(id).orElseThrow(() -> new UserNotFoundException("Пользователь с id: " + id + " не найден"));
+//    }
 }
